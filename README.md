@@ -9,7 +9,8 @@ it just replaces malloc realloc calloc and free using macros resulting a very dr
 # output
 this is the output of the example test provided
 
-```10
+```
+10
 0========================
 number of allocations: 26
 number of frees: 5
@@ -22,16 +23,22 @@ memory allocation table scaled to 14 buckets
 ========================
 leak(s) detected check leak2leaks.txt
 ========================
-warning(s) detected check leak2warnings.txt```
+warning(s) detected check leak2warnings.txt
+```
 
 leak2leaks.txt
-``` 9 leak(s) at leak2test.c:11 totalling 36 bytes with 0 realloc bytes
+```
+9 leak(s) at leak2test.c:11 totalling 36 bytes with 0 realloc bytes
 9 leak(s) at leak2test.c:16 totalling 36 bytes with 0 realloc bytes
 1 leak(s) at leak2test.c:27 totalling 8 bytes with 4 realloc bytes
 1 leak(s) at leak2test.c:35 totalling 4 bytes with 0 realloc bytes
-1 leak(s) at leak2test.c:40 totalling 8 bytes with 0 realloc bytes```
+1 leak(s) at leak2test.c:40 totalling 8 bytes with 0 realloc bytes
+```
 
 leak2warnings.txt
-```(10x) LEAK-DETECTOR-WARNING::UNKNOWN FREE leak2test.c:22```
+```
+(10x) LEAK-DETECTOR-WARNING::UNKNOWN FREE leak2test.c:22
+```
+
 # improvements
 swapping to open addressing as opposed to seperate chainging would help with cache coherence and potentially lead to faster accessing
